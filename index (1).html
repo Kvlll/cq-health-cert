@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <title>重庆市从业人员健康合格证明 - 在线电子核验系统</title>
+  <style>
+    :root {
+      --primary: #1b2e67;
+      --primary-light: #2563eb;
+      --bg: #f1f5f9;
+      --card-bg: #ffffff;
+      --text: #0f172a;
+      --subtext: #475569;
+      --success-bg: #ecfdf5;
+      --success-border: #a7f3d0;
+      --success-text: #047857;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 12px;
+    }
+
+    .app-container {
+      max-width: 480px;
+      width: 100%;
+      background: var(--card-bg);
+      border-radius: 16px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      border: 1px solid #e2e8f0;
+      margin-top: 10px;
+    }
+
+    /* 页眉 Banner */
+    .gov-header {
+      background: linear-gradient(135deg, #1b2e67 0%, #1d4ed8 100%);
+      color: #ffffff;
+      padding: 20px 16px;
+      text-align: center;
+      position: relative;
+    }
+
+    .gov-header-title {
+      font-size: 19px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .gov-header-sub {
+      font-size: 11px;
+      opacity: 0.85;
+      margin-top: 4px;
+      letter-spacing: 0.5px;
+    }
+
+    /* 核验状态绿框 */
+    .verify-banner {
+      background-color: var(--success-bg);
+      border: 1px solid var(--success-border);
+      color: var(--success-text);
+      margin: 16px;
+      padding: 14px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .verify-icon {
+      width: 36px;
+      height: 36px;
+      background-color: #10b981;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+
+    .verify-info-title {
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    .verify-info-desc {
+      font-size: 12px;
+      margin-top: 2px;
+      opacity: 0.9;
+    }
+
+    /* 证书详细信息列表 */
+    .detail-card {
+      padding: 0 16px 20px 16px;
+    }
+
+    .section-header {
+      font-size: 14px;
+      font-weight: bold;
+      color: var(--primary);
+      border-left: 4px solid var(--primary-light);
+      padding-left: 8px;
+      margin-bottom: 12px;
+    }
+
+    .info-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      background-color: #f8fafc;
+      border-radius: 10px;
+      padding: 14px;
+      border: 1px solid #f1f5f9;
+    }
+
+    .info-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+      border-bottom: 1px dashed #e2e8f0;
+      padding-bottom: 8px;
+    }
+
+    .info-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .info-label {
+      color: var(--subtext);
+    }
+
+    .info-value {
+      font-weight: 600;
+      color: var(--text);
+      text-align: right;
+    }
+
+    .info-value.highlight {
+      color: var(--primary-light);
+      font-size: 15px;
+    }
+
+    /* 印章示意区 */
+    .official-stamp-area {
+      text-align: center;
+      margin-top: 15px;
+      padding-top: 10px;
+      border-top: 1px solid #e2e8f0;
+    }
+
+    .stamp-text {
+      font-size: 12px;
+      color: var(--subtext);
+    }
+
+    .footer-note {
+      text-align: center;
+      padding: 16px;
+      font-size: 11px;
+      color: #94a3b8;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-container">
+    <div class="gov-header">
+      <div class="gov-header-title">重庆市从业人员健康合格证明</div>
+      <div class="gov-header-sub">预防性健康检查电子防伪核验系统</div>
+    </div>
+
+    <div class="verify-banner">
+      <div class="verify-icon">✓</div>
+      <div>
+        <div class="verify-info-title">核验结果：真实有效</div>
+        <div class="verify-info-desc">已在全国/重庆市预防性健康体检数据库成功备案</div>
+      </div>
+    </div>
+
+    <div class="detail-card">
+      <div class="section-header">持证人及体检信息</div>
+
+      <div class="info-list">
+        <div class="info-item">
+          <span class="info-label">姓　　名</span>
+          <span class="info-value highlight">蔡万铖</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">性　　别</span>
+          <span class="info-value">男</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">年　　龄</span>
+          <span class="info-value">20 岁</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">身份证号</span>
+          <span class="info-value">360821200601262318</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">证书编号</span>
+          <span class="info-value">360821200601262318</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">工种/行业</span>
+          <span class="info-value">食品卫生</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">体检结论</span>
+          <span class="info-value" style="color: #047857;">体检合格（符合从业要求）</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">体检日期</span>
+          <span class="info-value">2026-08-01</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">发证日期</span>
+          <span class="info-value">2026-08-01</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">有效期限</span>
+          <span class="info-value" style="color: #dc2626;">2026-08-01 至 2027-07-31 (一年)</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">发证/体检机构</span>
+          <span class="info-value">垫江县桂阳社区卫生服务中心</span>
+        </div>
+      </div>
+
+      <div class="official-stamp-area">
+        <div class="stamp-text">备案专用章：垫江县桂阳社区卫生服务中心 (已签章)</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-note">
+    重庆市卫生健康委员会监制 · 疾病预防控制管理平台备案<br>
+    数据核验时间：<span id="currTime"></span>
+  </div>
+
+  <script>
+    const now = new Date();
+    document.getElementById('currTime').innerText = now.getFullYear() + '-' +
+      String(now.getMonth() + 1).padStart(2, '0') + '-' +
+      String(now.getDate()).padStart(2, '0') + ' ' +
+      String(now.getHours()).padStart(2, '0') + ':' +
+      String(now.getMinutes()).padStart(2, '0');
+  </script>
+</body>
+</html>
